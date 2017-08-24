@@ -1,0 +1,10 @@
+使时间保持在白天或晚上
+
+代码：
+summon falling_block ~ ~1 ~ {Time:1,Block:"Command_Block",Passengers:[{id:"falling_block",Time:1,Block:"Command_Block",Passengers:[{id:"falling_block",Time:1,Block:"Command_Block",Passengers:[{id:"falling_block",Time:1,Block:"Command_Block",Passengers:[{id:"falling_block",Time:1,Block:"Command_Block",TileEntityData:{Command:"fill ~ ~ ~ ~ ~-5 ~ air 0 hollow",auto:1}}],TileEntityData:{Command:"scoreboard players set gametimer timestayday 0",auto:1}}],TileEntityData:{Command:"scoreboard objectives add timestayday dummy",auto:1}}],TileEntityData:{Command:"summon falling_block ~ ~ ~-2 {Time:1,Block:\"Repeating_Command_Block\",Data:10,Passengers:[{id:\"falling_block\",Time:1,Block:\"Repeating_Command_Block\",Data:10,TileEntityData:{Command:\"time set 6000\",auto:1}}],TileEntityData:{Command:\"time set 18000\",auto:1}}",auto:1}}],TileEntityData:{Command:"summon falling_block ~ ~ ~-1 {Time:1,Block:\"Chain_Command_Block\",Passengers:[{id:\"falling_block\",Time:1,Block:\"Chain_Command_Block\",Passengers:[{id:\"falling_block\",Time:1,Block:\"Chain_Command_Block\",Passengers:[{id:\"falling_block\",Time:1,Block:\"Repeating_Command_Block\",TileEntityData:{Command:\"gamerule gameStayDayNight\",auto:1}}],TileEntityData:{Command:\"stats block ~ ~1 ~ set QueryResult gametimer timestayday\"}}],TileEntityData:{Command:\"scoreboard players test gametimer timestayday 1 1\"}}],TileEntityData:{Command:\"scoreboard players test gametimer timestayday 2 2\"}}",auto:1}}
+
+用法：
+/gamerule gameStayDayNight <0/1/2>
+0 - 正常
+1 - 保持白天
+2 - 保持晚上
